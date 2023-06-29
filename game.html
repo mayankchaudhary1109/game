@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <style>
+    .main {
+        background-image: url('Symbols/background.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-size: 100% ;
+        width: 100%;
+      }
+    .pumpbase{
+        position: relative;
+        margin-left: 450px;
+        margin-top: 220px;
+        
+        
+    }
+    .pumptop{
+     position:absolute;
+     margin-left: 470px;
+     margin-top: 100px;
+        
+        
+    }
+    .pumptop1{
+        position:absolute;
+     margin-left: 470px;
+     margin-top: 140px;
+          
+    }
+    .pumpleft{
+        position:absolute;
+        margin-left: 390px;
+        margin-top: 250px;
+        
+    }
+    .img{
+        width:0px;
+        height:0px;
+        position:absolute;
+        margin-left: 420px;
+        margin-top: 255px;
+
+        
+    }
+    .img1{
+        width:25px;
+        height:25px;
+        position:absolute;
+        margin-left: 412px;
+        margin-top: 253px;
+       
+       
+    }
+    .img2{
+        width:50px;
+        height:50px;
+        position:absolute;
+        margin-left: 400px;
+        margin-top: 230px;
+        
+    }
+    .img3{
+        width:75px;
+        height:75px;
+        position:absolute;
+        margin-left: 387px;
+       
+        margin-top: 205px;
+    }
+    .img4{
+        width:100px;
+        height:100px;
+        position:absolute;
+        margin-left: 375px;
+        margin-top: 180px;
+        animation-name: imganimation;
+        animation-duration: 6s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        }
+@keyframes imganimation {
+    0%   { left: 0px; top: 0px; }
+  25%  { left: -100px; top: -50px; }
+  50%  { left: -200px; top: -100px; }
+  75%  { left: -300px; top: -150px; }
+  100% { left: -400px; top: -200px; }
+}
+.rop{
+        width:0px;
+        height:0px;
+        position:absolute;
+        margin-left: 420px;
+        margin-top: 255px;
+
+        
+    }
+    .rop1{
+        width:25px;
+        height:25px;
+        position:absolute;
+        margin-left: 411px;
+        margin-top: 266px;
+       
+       
+    }
+    .rop2{
+        width:50px;
+        height:50px;
+        position:absolute;
+        margin-left: 400px;
+        margin-top: 258px;
+        
+    }
+    .rop3{
+        width:75px;
+        height:75px;
+        position:absolute;
+        margin-left: 387px;
+       
+        margin-top: 249px;
+    }
+    .rop4{
+        width:100px;
+        height:100px;
+        position:absolute;
+        margin-left: 375px;
+        margin-top: 239px;
+        animation-name: imganimation;
+        animation-duration: 6s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        }
+@keyframes  ropanimation {
+    0%   { left: 0px; top: 0px; }
+  25%  { left: -100px; top: -50px; }
+  50%  { left: -200px; top: -100px; }
+  75%  { left: -300px; top: -150px; }
+  100% { left: -400px; top: -200px; }
+}
+.nameM{
+        width:0px;
+        height:0px;
+        position:absolute;
+        margin-left: 420px;
+        margin-top: 255px;
+
+        
+    }
+    .nameM1{
+        width:15px;
+        height:15px;
+        position:absolute;
+        margin-left: 417px;
+        margin-top: 256px;
+       
+       
+    }
+    .nameM2{
+        width:25px;
+        height:25px;
+        position:absolute;
+        margin-left: 413px;
+        margin-top: 242px;
+        
+    }
+    .nameM3{
+        width:40px;
+        height:40px;
+        position:absolute;
+        margin-left: 404px;
+       
+        margin-top: 222px;
+    }
+    .nameM4{
+        width:55px;
+        height:55px;
+        position:absolute;
+        margin-left: 397px;
+        margin-top: 201px;
+        animation-name: imganimation;
+        animation-duration: 6s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        }
+@keyframes  nameanimation {
+    0%   { left: 0px; top: 0px; }
+  25%  { left: -100px; top: -50px; }
+  50%  { left: -200px; top: -100px; }
+  75%  { left: -300px; top: -150px; }
+  100% { left: -400px; top: -200px; }
+}
+
+    
+</style>
+<script>
+
+function press() {
+        let element = document.getElementById("p");
+        let bal = document.getElementById("bal");
+
+          if (element.classList.contains("pumptop")) {
+            element.classList.remove("pumptop");
+            element.classList.add("pumptop1");
+            
+            setTimeout(function() {
+                element.classList.remove("pumptop1");
+                element.classList.add("pumptop");
+                showBalloon();
+              
+            }, 200);
+        } 
+}
+function showBalloon() {
+    let bal= document.getElementById('bal');
+    let rope = document.getElementById("rope");
+    let name = document.getElementById("m");
+
+    if  ( bal.classList.contains("img") && rope.classList.contains("rop") && name.classList.contains("nameM")) {
+        bal.classList.add("img1")
+        rope.classList.add("rop1")
+        name.classList.add("nameM1")
+        bal.classList.remove("img")
+        rope.classList.remove("rop")
+        name.classList.remove("nameM");
+    }
+    else if  ( bal.classList.contains("img1") && rope.classList.contains("rop1") && name.classList.contains("nameM1")){
+        bal.classList.add("img2")
+        rope.classList.add("rop2")
+        name.classList.add("nameM2")
+        bal.classList.remove("img1")
+        rope.classList.remove("rop1")
+        name.classList.remove("nameM1");
+    }
+    else if  ( bal.classList.contains("img2") && rope.classList.contains("rop2") && name.classList.contains("nameM2")){
+        bal.classList.add("img3")
+        rope.classList.add("rop3")
+        name.classList.add("nameM3")
+        bal.classList.remove("img2")
+        rope.classList.remove("rop2")
+        name.classList.remove("nameM2");
+
+    }
+    else if  ( bal.classList.contains("img3") && rope.classList.contains("rop3") &&  name.classList.contains("nameM3")){
+        bal.classList.add("img4")
+        rope.classList.add("rop4")
+        name.classList.add("nameM4")
+        bal.classList.remove("img3")
+        rope.classList.add("rop3")
+        name.classList.remove("nameM3"); 
+       
+    }
+       }
+       function clear(){
+        let bal=document.getElementById("bal");
+        let rope=document.getElementById("rope");
+       if( bal.classList.contains("img4") &&  rope.classList.contains("rop4")){
+        bal.classList.add("img")
+        rope.classList.add("rop")
+        bal.classList.remove("img4", "img3", "img2", "img1");
+        rope.classList.remove("rop4", "rop3", "rop2", "rop1");
+       }
+       }
+  
+</script>
+</head>
+<body>
+    <div class="main">
+        
+        <div>
+            <img  id="bal" class="img" src="symbols/balloon100007.png" onclick="clear()"/>
+            <img  id ="rope" class="rop" src="symbols/rope100011.png" onclick="clear()"/>
+            <img id="m" class="nameM" src="symbols/M10013.png" />
+            <img src="symbols/pumpleft.png" width="13%" class="pumpleft" id="b">
+            <img src="symbols/pumpupper.png" width="19%" class="pumptop" onclick="press()" id="p">
+            <img src="symbols/pumpbase.png" width="23%" class="pumpbase" >
+        
+
+        </div>
+    </div>
+</body>
+</html>
